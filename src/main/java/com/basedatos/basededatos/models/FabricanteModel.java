@@ -3,7 +3,7 @@ package com.basedatos.basededatos.models;
 import jakarta.persistence.*;
 @Entity
 @Table(schema = "Fabricante")
-public class Fabricante {
+public class FabricanteModel {
         @Id
         @Column(name = "id",updatable = false, nullable = false,  unique = true)
         @GeneratedValue(strategy = GenerationType.IDENTITY)

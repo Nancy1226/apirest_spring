@@ -4,22 +4,22 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(schema = "MecaSoft")
-public class MecaSoft {
+public class MecaSoftModel {
     @Id
     @Column(name = "id",updatable = false, nullable = false,  unique = true)
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "name_gass", nullable = false)
+    @Column(name = "name", nullable = false)
     private String name;
 
     @Column(name = "name_users", nullable = false)
     private String name_users;
 
     @Column(name = "email", nullable = false)
-    private boolean email;
+    private String email;
 
     @Column(name = "matricula", nullable = false)
-    private int matricula;
+    private String matricula;
 
     @Column(name = "password", nullable = false)
     private String password;
@@ -51,19 +51,19 @@ public class MecaSoft {
         this.name_users = name_users;
     }
 
-    public boolean isEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(boolean email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 
